@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $default-font;
+    color: $black;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+
+    @include media ('>=576px') {
+        padding: 0 18px;
+    }
+
+    @include media ('>=768px') {
+        padding: 0 24px;
+    }
+
+    @include media ('>=1024px') {
+        padding: 0 15px;
+    }
+}
+.main {
+    padding-top: 88px;
+}

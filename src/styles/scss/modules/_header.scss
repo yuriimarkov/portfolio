@@ -1,0 +1,71 @@
+.header {
+    padding: 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: $white;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo-holder {
+        padding-top: 10px;
+    }
+
+    .btn-edit {
+        width: 248px;
+        height: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: 1px solid #FF5B00;
+        border-radius: 8px;
+
+        font-size: 16px;
+        line-height: 19px;
+        color: $black;
+    } 
+    .btn-menu {
+        width: 248px;
+        height: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $orange;
+        border-radius: 8px;
+
+        font-size: 16px;
+        line-height: 19px;
+        color: $white;
+    }
+
+    &.active {
+        
+        .nav {
+            visibility: visible;
+            opacity: 1;
+        }
+    
+        .nav-btn {
+          span {
+            opacity: 0;
+          }
+    
+          &:before {
+            transform: rotate(45deg);
+            top: 40%;
+          }
+    
+          &:after {
+            transform: rotate(-45deg);
+            bottom: 50%;
+          }
+        }
+      }
+}

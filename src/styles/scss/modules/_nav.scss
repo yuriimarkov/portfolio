@@ -1,0 +1,132 @@
+.nav-holder {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &:nth-child(even) {
+        align-self: flex-start;
+    }
+   }
+
+.nav {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+
+    .nav-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .nav-title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: $grey;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 16px;
+        padding: 0;
+    }
+
+    .nav-item {
+        display: flex;
+    }
+
+    .nav-link {
+        width: 100%;
+        color: $black;
+        display: flex;
+        align-items: center;
+        transition: all ease-in-out 0.3s;
+
+        &:hover {
+            color: $orange;
+            background-color: $mistyrose;
+            border-radius: 50px;
+            transform: scale(1.2);
+        }
+
+        span {
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        @keyframes visible_orbit {
+
+		0% { transform: translate(-4em,0%) scale(0); opacity: 0; }
+		25% { transform: translate(-8em,0%) scale(1); opacity: 1; }
+		50% { transform: translate(12em,0%) scale(1.5); opacity: 1; }
+		75% { transform: translate(32em,0%) scale(1); opacity: 1; }
+		100% { transform: translate(24em,0%) scale(0); opacity: 0; }
+	}
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: $mistyrose;
+        border-radius: 50%;
+        margin-right: 22px;
+        color: $orange;
+        font-size: 24px;
+    }
+}
+
+.nav-btn-holder {
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $mistyrose;
+        border-radius: 4px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10);
+        outline: none;
+        
+
+        .nav-btn {
+            position: relative;
+            width: 24px;
+            height: 16px;
+            background-color: transparent;
+            outline: none;
+            border: none;
+        
+            
+            span,
+            &:before,
+            &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            border-bottom: 2px solid $orange;
+            border-radius: 4px;
+            transition: all ease-in-out 0.3s;
+            }
+        
+            span {
+            top: 50%;
+            transform: translateY(-50%);
+            }
+        
+            &:before {
+            top: 0;
+            }
+        
+            &:after {
+            bottom: 0;
+            }
+        }
+    }

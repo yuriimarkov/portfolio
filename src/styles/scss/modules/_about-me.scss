@@ -1,0 +1,29 @@
+.about-me {
+    background-color: $mistyrose;
+    padding: 80px 0;
+    margin-bottom: 100px;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content {
+        width: calc(50% - 240px);
+    }
+
+    .text-holder {
+        padding: 34px 0;
+    }
+
+    .img-holder {
+        width: 240px;
+        height: 100%;
+        padding-right: 40px;
+    
+        img {
+            border-radius: 50%;
+        }
+    }
+}

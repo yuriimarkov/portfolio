@@ -1,0 +1,59 @@
+.services {
+    margin-bottom: 100px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .heading {
+        text-align: center;
+        width: 25%;  
+        margin-bottom: 34px;
+    }
+
+    .project-heading {
+        margin-bottom: 18px;
+    }
+
+    .project-title {
+        padding-bottom: 36px;
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 18px 0;
+        width: calc(100% - 112px);
+        gap: 40px;
+        padding-bottom: 64px;
+    }
+
+    .item {
+        width: calc(100% / 4);
+    }
+
+    .img-holder {
+        width: 100%;
+        background-color: $orange;
+        border-radius: 8px;
+        padding: 35px;
+    }
+
+    .category {
+        display: block;
+        font-size: 13px;
+        line-height: 15px;
+        color: $pink;
+        margin: 16px 0;
+    }
+
+    .category-title {
+        margin-bottom: 8px;
+    }
+
+}

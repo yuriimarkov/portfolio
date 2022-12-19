@@ -1,0 +1,46 @@
+.numerical-data {
+    margin-bottom: 100px;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        gap: 16px;
+    }
+
+    .item {
+        position: relative;
+        width: calc(100% / 3);
+        display: flex;
+        flex-direction: column;
+        padding-left: 36px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            background-color: $orange;
+            top: 0;
+            left: 0;
+        }
+    }
+    .card-number {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .card-text {
+        font-size: 13px;
+        line-height: 15px;
+        color: $grey;
+    }
+}
